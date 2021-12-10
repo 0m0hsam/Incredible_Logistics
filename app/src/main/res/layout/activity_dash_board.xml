@@ -12,22 +12,24 @@
     <ImageView android:layout_width="match_parent"
                android:layout_height="300dp"
                android:paddingTop="10dp"
-                android:id="@+id/login_image"
+               android:id="@+id/logo_image"
+               android:transitionName="logo_tran"
                android:src="@drawable/loginui"/>
 
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:id="@+id/loginName1"
+              android:id="@+id/slogan_text"
               android:text="Welcome To
 Incredible Logistics"
               android:textColor="@color/black"
               android:layout_marginLeft="10dp"
               android:textSize="30sp"
+              android:transitionName="slogan_text"
               android:textAlignment="center"
               android:fontFamily="@font/bungee"/>
 
     <TextView
-              android:id="@+id/loginName3"
+              android:id="@+id/logintext"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="Sign in to continue"
@@ -49,11 +51,13 @@ Incredible Logistics"
                 android:layout_height="wrap_content"
                 android:id="@+id/username"
                 android:hint="Username"
+                android:transitionName="email_tran"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
 
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -64,6 +68,7 @@ Incredible Logistics"
                 android:id="@+id/password"
                 android:hint="Password"
                 app:passwordToggleEnabled="true"
+                android:transitionName="password_tran"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -81,6 +86,8 @@ Incredible Logistics"
                 android:elevation="0dp"
                 android:layout_gravity="right"
                 android:layout_margin="5dp"
+                android:id="@+id/reset_btn"
+                android:transitionName="reset_tran"
                 android:text="Forget Password?"/>
 
 <Button android:layout_width="match_parent"
@@ -90,7 +97,10 @@ Incredible Logistics"
                 android:textStyle="bold"
                 android:elevation="0dp"
                 android:layout_margin="5dp"
-                android:text="Login"/>
+                android:transitionName="login_tran"
+                android:id="@+id/login_btn"
+                android:text="Login"
+                android:onClick="loginUserBtn"/>
 
         <Button android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -99,7 +109,9 @@ Incredible Logistics"
                 android:textStyle="bold"
                 android:elevation="0dp"
                 android:layout_margin="5dp"
+                android:transitionName="signup_tran"
                 android:text="New User? Sign Up"
+                android:id="@+id/loginsignup_btn"
                 android:fontFamily="@font/antic"/>
 
 
